@@ -2,10 +2,12 @@
   position: relative;
   top: 0;
   height: 100vh;
+  
 
   &.wrapper-full-page{
     min-height: 100vh;
     height: auto;
+    
   }
 }
 
@@ -40,6 +42,8 @@
     z-index: 4;
     position: relative;
     overflow: auto;
+    
+ 
 
     .dropdown .dropdown-backdrop{
       display: none !important;
@@ -83,11 +87,12 @@
           display: inherit;
           line-height: 24px;
           color: $opacity-8;
+          
         }
 
         i{
           font-size: 17px;
-          line-height: 20px;
+          line-height: 0px;
           width: 26px;
         }
       }
@@ -98,6 +103,7 @@
     [data-toggle="collapse"] ~ div > ul > li:hover > a{
       .sidebar-mini-icon, .sidebar-normal{
         color: $white;
+        
       }
 
     }
@@ -152,15 +158,14 @@
       }
 
       > a{
-        margin: 10px 15px 0;
+        margin: 15px 15px 0;
         border-radius: $btn-round-radius;
         color: $white;
         display: block;
         text-decoration: none;
         position: relative;
         text-transform: uppercase;
-        cursor: pointer;
-        font-size: $font-size-xs;
+        font-size:12px;
         padding: 10px 8px;
         line-height: $line-height-lg;
       }
@@ -216,6 +221,7 @@
           .sidebar-mini-icon, .sidebar-normal{
             color: $white;
             font-weight: $font-weight-normal;
+            
           }
 
           &:before{
@@ -427,6 +433,7 @@
     > li > a,
     > li > a:hover{
       color: $white;
+      
     }
 
     > li > a:focus{
@@ -485,6 +492,7 @@
 .main-panel,
 .sidebar-wrapper{
   -webkit-overflow-scrolling: touch;
+  
 }
 
 @media (min-width: 991px) {
@@ -536,6 +544,8 @@
           @include transform-translate-x(-25px);
           opacity: 0;
         }
+
+        
       }
 
       .nav [data-toggle="collapse"] ~ div > ul > li > a .sidebar-mini-icon{
@@ -566,6 +576,8 @@
         .user .info > a > span{
           @include transform-translate-x(0px);
           opacity: 1;
+
+          
         }
       }
 
@@ -637,6 +649,7 @@
 
 @media screen and (max-width: 991px){
   .sidebar{
+    
     position: fixed;
     display: block;
     top: 0;

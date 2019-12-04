@@ -117,7 +117,7 @@ class Admin extends React.Component {
             bgColor={this.state.backgroundColor}
             logo={{
               outterLink: "https://www.creative-tim.com/",
-              text: "Creative Tim",
+              text: "Team Graduate",
               imgSrc: logo
             }}
             toggleSidebar={this.toggleSidebar}
@@ -136,14 +136,11 @@ class Admin extends React.Component {
             <Switch>{this.getRoutes(routes)}</Switch>
             {// we don't want the Footer to be rendered on map page
             this.props.location.pathname.indexOf("maps") !== -1 ? null : (
-              <Footer fluid />
+              <Footer  />
             )}
           </div>
         </div>
-        <FixedPlugin
-          bgColor={this.state.backgroundColor}
-          handleBgClick={this.handleBgClick}
-        />
+      
       </>
     );
   }
