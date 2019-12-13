@@ -110,7 +110,7 @@ let chartExample1 = {
           pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
           pointHoverBackgroundColor: "#1f8ef1",
-          pointBorderWidth: 20,
+          // pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,

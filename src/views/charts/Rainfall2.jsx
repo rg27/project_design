@@ -23,7 +23,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-export default class Rainfall extends Component
+export default class Rainfall2 extends Component
 {
    constructor(props) {
       super(props);
@@ -88,7 +88,7 @@ export default class Rainfall extends Component
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  <div className="chart-area" style = {{height:"70vh"}}>
+                  <div className="chart-area">
                     <Line   data = {this.state.Data}
                     options = {{ maintainAspectRatio: false,legend: {
                     display: false  },
