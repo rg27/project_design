@@ -83,7 +83,7 @@ var routes = [
     icon: "tim-icons icon-pin",
     component: Map,
     layout: "/admin"
-  },
+  }
   
 
   // {

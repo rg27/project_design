@@ -76,7 +76,7 @@ export default class FloodSiteA extends Component
                 </Row>
               </CardHeader>
               <CardBody>
-                <div className="chart-area" style = {{height:"70vh"}}>
+                <div className="chart-area" style = {{height:"65vh"}}>
                   <Line  data = {this.state.Data}
                   options = {{ maintainAspectRatio: false,legend: {
                   display: false  },

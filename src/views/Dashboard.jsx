@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
             </Col>
          
             <Col lg="6">
-              <div className="chart-area">
+              <div className="chart-area ">
                 < FloodSiteB2/>
               </div>
             </Col>
