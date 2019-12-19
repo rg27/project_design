@@ -1,12 +1,10 @@
 
 import Dashboard from "views/Dashboard.jsx";
-import Map from "views/Map.jsx";
-
 import TableList from "views/TableList.jsx";
-
 import Rainfall from "views/Rainfall.jsx"
 import FloodSiteA from "./views/FloodSiteA";
 import FloodSiteB from "./views/FloodSiteB";
+import LocationMap from "./views/Map";
 
 var routes = [
   {
@@ -81,7 +79,7 @@ var routes = [
     name: "Map",
     // rtlName: "خرائط",
     icon: "tim-icons icon-pin",
-    component: Map,
+    component: LocationMap,
     layout: "/admin"
   }
   

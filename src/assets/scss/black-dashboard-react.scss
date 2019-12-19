@@ -1,22 +1,5 @@
 
-/*
- =========================================================
- * Black Dashboard React v1.0.0 based on Black Dashboard - v1.0.0
- =========================================================
 
- * Product Page: https://www.creative-tim.com/product/black-dashboard-react
- * Copyright 2019 Creative Tim (https://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
- * Coded by Creative Tim
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
- // Core
 
 @import "black-dashboard-react/custom/functions";
 @import "black-dashboard-react/bootstrap/functions";
@@ -26,6 +9,9 @@
 
 @import "black-dashboard-react/custom/mixins";
 @import "black-dashboard-react/bootstrap/mixins";
+// @import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
+// @import 'bootstrap/dist/css/bootstrap-theme.css';
 
  // Bootstrap components
 
@@ -37,17 +23,17 @@
 @import "black-dashboard-react/bootstrap/grid";
 @import "black-dashboard-react/bootstrap/tables";
 @import "black-dashboard-react/bootstrap/forms";
-@import "black-dashboard-react/bootstrap/buttons";
+// @import "black-dashboard-react/bootstrap/buttons";
 @import "black-dashboard-react/bootstrap/transitions";
 @import "black-dashboard-react/bootstrap/dropdown";
-@import "black-dashboard-react/bootstrap/button-group";
+// @import "black-dashboard-react/bootstrap/button-group";
 @import "black-dashboard-react/bootstrap/input-group";
 @import "black-dashboard-react/bootstrap/custom-forms";
 @import "black-dashboard-react/bootstrap/nav";
 @import "black-dashboard-react/bootstrap/navbar";
 @import "black-dashboard-react/bootstrap/card";
 @import "black-dashboard-react/bootstrap/breadcrumb";
-@import "black-dashboard-react/bootstrap/pagination";
+// @import "black-dashboard-react/bootstrap/pagination";
 @import "black-dashboard-react/bootstrap/badge";
 @import "black-dashboard-react/bootstrap/jumbotron";
 @import "black-dashboard-react/bootstrap/alert";
@@ -66,7 +52,7 @@
 
  @import "black-dashboard-react/custom/alerts.scss";
  @import "black-dashboard-react/custom/badges.scss";
- @import "black-dashboard-react/custom/buttons.scss";
+//  @import "black-dashboard-react/custom/buttons.scss";
  @import "black-dashboard-react/custom/dropdown.scss";
  @import "black-dashboard-react/custom/footer.scss";
  @import "black-dashboard-react/custom/forms.scss";

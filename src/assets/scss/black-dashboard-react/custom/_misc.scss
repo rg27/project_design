@@ -15,37 +15,37 @@
 }
 
 //transition for dropdown caret
-.bootstrap-switch-label:before,
-.caret{
-    @include transitions($fast-transition-time, $transition-ease);
-}
+// .bootstrap-switch-label:before,
+// .caret{
+//     @include transitions($fast-transition-time, $transition-ease);
+// }
 
-.dropdown-toggle[aria-expanded="true"]:after,
-a[data-toggle="collapse"][aria-expanded="true"] .caret,
-.card-collapse .card a[data-toggle="collapse"][aria-expanded="true"] i,
-.card-collapse .card a[data-toggle="collapse"].expanded i{
-    @include rotate-180();
-}
+// .dropdown-toggle[aria-expanded="true"]:after,
+// a[data-toggle="collapse"][aria-expanded="true"] .caret,
+// .card-collapse .card a[data-toggle="collapse"][aria-expanded="true"] i,
+// .card-collapse .card a[data-toggle="collapse"].expanded i{
+//     @include rotate-180();
+// }
 
-.caret{
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  margin-top: -5px;
-  position: absolute;
-  top: 30px;
-  margin-left: 5px;
-}
+// .caret{
+//   width: 0;
+//   height: 0;
+//   vertical-align: middle;
+//   border-top: 4px dashed;
+//   border-right: 4px solid transparent;
+//   border-left: 4px solid transparent;
+//   margin-top: -5px;
+//   position: absolute;
+//   top: 30px;
+//   margin-left: 5px;
+// }
 
-.pull-left{
-  float: left;
-}
-.pull-right{
-  float: right;
-}
+// .pull-left{
+//   float: left;
+// }
+// .pull-right{
+//   float: right;
+// }
 
 
 // card user profile page

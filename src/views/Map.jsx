@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* Black Dashboard React v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // react plugin used to create google maps
 import {
@@ -31,7 +15,7 @@ const MapWrapper = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       defaultZoom={13}
-      defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
+      defaultCenter={{ lat: 10.3157, lng: 123.8854 }}
       defaultOptions={{
         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
         styles: [
@@ -278,7 +262,7 @@ const MapWrapper = withScriptjs(
         ]
       }}
     >
-      <Marker position={{ lat: 40.748817, lng: -73.985428 }} />
+      <Marker position={{ lat: 10.3157, lng: 123.8854 }} />
     </GoogleMap>
   ))
 );
@@ -291,7 +275,7 @@ class Map extends React.Component {
           <Row>
             <Col md="12">
               <Card className="card-plain">
-                <CardHeader>Google Maps</CardHeader>
+                <CardHeader>Location Map</CardHeader>
                 <CardBody>
                   <div
                     id="map"
@@ -299,10 +283,10 @@ class Map extends React.Component {
                     style={{ position: "relative", overflow: "hidden" }}
                   >
                     <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-                      loadingElement={<div style={{ height: `100%` }} />}
-                      containerElement={<div style={{ height: `100%` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbgYr-EQsfV7hdEeoHzmICbn5O8MRqbUc"
+                      loadingElement={<div style={{ height: `150%` }} />}
+                      containerElement={<div style={{ height: `150%` }} />}
+                      mapElement={<div style={{ height: `150%` }} />}
                     />
                   </div>
                 </CardBody>
