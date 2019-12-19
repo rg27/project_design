@@ -14,10 +14,11 @@ import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 const MapWrapper = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={13}
+      defaultZoom={12}
+      initialCenter={{ lat: 10.3157, lng: 123.8854}}
       defaultCenter={{ lat: 10.3157, lng: 123.8854 }}
       defaultOptions={{
-        scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+        scrollwheel: true, //we disable de scroll over the map, it is a really annoing when you scroll through page
         styles: [
           {
             elementType: "geometry",
@@ -263,6 +264,12 @@ const MapWrapper = withScriptjs(
       }}
     >
       <Marker position={{ lat: 10.3157, lng: 123.8854 }} />
+      <Marker position={{ lat: 10.3321, lng: 123.9357 }} />
+      <Marker
+      
+       position={{ lat: 10.3338, lng: 123.8941 }}  
+         name={'Kenyatta International Convention Centre'}
+          />
     </GoogleMap>
   ))
 );
@@ -273,7 +280,7 @@ class Map extends React.Component {
       <>
         <div className="content">
           <Row>
-            <Col md="12">
+            <Col lg="12">
               <Card className="card-plain">
                 <CardHeader>Location Map</CardHeader>
                 <CardBody>
@@ -284,9 +291,9 @@ class Map extends React.Component {
                   >
                     <MapWrapper
                       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbgYr-EQsfV7hdEeoHzmICbn5O8MRqbUc"
-                      loadingElement={<div style={{ height: `150%` }} />}
-                      containerElement={<div style={{ height: `150%` }} />}
-                      mapElement={<div style={{ height: `150%` }} />}
+                      loadingElement={<div style={{ height: `100%` }} />}
+                      containerElement={<div style={{ height: `100%` }} />}
+                      mapElement={<div style={{ height: `100%` }} />}
                     />
                   </div>
                 </CardBody>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
@@ -39,9 +38,9 @@ class TableList extends Component {
 
   componentDidMount() {
     Promise.all([
-      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=10'),
-      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=20'),
-      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=30')
+      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=5'),
+      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=15'),
+      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=25')
     ])
     .then(([rainfalls_response, floods1_response, floods2_response]) => {
       const rainfalls = rainfalls_response.data.feeds
@@ -55,50 +54,49 @@ class TableList extends Component {
         });
   }
   
-  render() {
-    return (
-      <div className="container content" style={{ marginTop: 50 }}>
-        <BootstrapTable 
-        striped
-        hover
-        keyField='entry_id' 
-        data={ this.state.rainfalls } 
-        columns={ this.state.columns }
-        // filter={ filterFactory() } 
-        pagination={ paginationFactory() }
-        />
-
-      <div className="container content" style={{ marginTop: 50 }}>
-        <BootstrapTable 
-        striped
-        hover
-        keyField='entry_id' 
-        data={ this.state.floods1 } 
-        columns={ this.state.columns }
-        // filter={ filterFactory() } 
-      pagination={ paginationFactory() }
-      />
+    render() {
+      return (
+        <div className=" content" style={{ marginTop: 0 }}>
+          <div>
+            <h1>Rainfall Monitoring</h1>
+            <BootstrapTable 
+              striped
+              hover
+              keyField='entry_id' 
+              data={ this.state.rainfalls } 
+              columns={ this.state.columns }
+              pagination={ paginationFactory() }
+            />  
+          </div>
+        <div className=" content" style={{ marginTop: 50 }}>
+          <div>
+            <h1>Flood Site A</h1>
+            <BootstrapTable 
+              striped
+              hover
+              keyField='entry_id' 
+              data={ this.state.floods1 } 
+              columns={ this.state.columns }
+              pagination={ paginationFactory() }
+            />  
+          </div>
+        </div>
+        <div  className=" content" style={{ marginTop: 50 }}>
+          <div>
+            <h1>Flood Site B</h1>
+            <BootstrapTable 
+              striped
+              hover
+              keyField='entry_id' 
+              data={ this.state.floods2 } 
+              columns={ this.state.columns }
+              pagination={ paginationFactory() }
+            />  
+          </div>
+        </div>
       </div>
         
-
-
-      <div  className="container content" style={{ marginTop: 50 }}>
-
-        <BootstrapTable 
-        striped
-        hover
-        keyField='entry_id' 
-        data={ this.state.floods2 } 
-        columns={ this.state.columns }
-        // filter={ filterFactory() } 
-        pagination={ paginationFactory() }
-      />  
-
-      </div>
-      
-      </div>
-      
-    );
+      );
   }
 }
 

@@ -5,6 +5,8 @@ import Rainfall from "views/Rainfall.jsx"
 import FloodSiteA from "./views/FloodSiteA";
 import FloodSiteB from "./views/FloodSiteB";
 import LocationMap from "./views/Map";
+import Weather from "./views/Weather"
+
 
 var routes = [
   {
@@ -40,31 +42,6 @@ var routes = [
     layout: "/admin"
   },
 
-  // {
-  //   path: "/icons",
-  //   name: "Icons",
-  //   // rtlName: "الرموز",
-  //   icon: "tim-icons icon-atom",
-  //   component: Icons,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/notifications",
-  //   name: "Notifications",
-  //   // rtlName: "إخطارات",
-  //   icon: "tim-icons icon-bell-55",
-  //   component: Notifications,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/user-profile",
-  //   name: "User-Profile",
-  //   // rtlName: "ملف تعريفي للمستخدم",
-  //   icon: "tim-icons icon-single-02",
-  //   component: UserProfile,
-  //   layout: "/admin"
-  // },
-
   {
     path: "/tables",
     name: "Table List",
@@ -81,24 +58,17 @@ var routes = [
     icon: "tim-icons icon-pin",
     component: LocationMap,
     layout: "/admin"
-  }
-  
+  },
 
   // {
-  //   path: "/typography",
-  //   name: "Typography",
-  //   // rtlName: "طباعة",
-  //   icon: "tim-icons icon-align-center",
-  //   component: Typography,
+  //   path: "/weather",
+  //   name: "Weather",
+  //   // rtlName: "خرائط",
+  //   icon: "tim-icons icon-pin",
+  //   component: Weather,
   //   layout: "/admin"
-  // },
-  // {
-  //   path: "/rtl-support",
-  //   name: "RTL Support",
-  //   rtlName: "ار تي ال",
-  //   icon: "tim-icons icon-world",
-  //   component: Rtl,
-  //   layout: "/rtl"
   // }
+  
+
 ];
 export default routes;
