@@ -40,7 +40,7 @@ class TableList extends Component {
     Promise.all([
       axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=5'),
       axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=15'),
-      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=25')
+      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=105')
     ])
     .then(([rainfalls_response, floods1_response, floods2_response]) => {
       const rainfalls = rainfalls_response.data.feeds
@@ -70,7 +70,7 @@ class TableList extends Component {
           </div>
         <div className=" content" style={{ marginTop: 50 }}>
           <div>
-            <h1>Flood Site A</h1>
+            <h1>Flood Monitoring Site A</h1>
             <BootstrapTable 
               striped
               hover
@@ -83,7 +83,7 @@ class TableList extends Component {
         </div>
         <div  className=" content" style={{ marginTop: 50 }}>
           <div>
-            <h1>Flood Site B</h1>
+            <h1>Flood Monitoring Site B</h1>
             <BootstrapTable 
               striped
               hover

@@ -1,307 +1,64 @@
+import React, { Component } from 'react';
+import { ReactBingmaps } from 'react-bingmaps';
+import "../assets/css/style.css";
 
-import React from "react";
-// react plugin used to create google maps
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker
-} from "react-google-maps";
 
-// reactstrap components
-import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
-
-const MapWrapper = withScriptjs(
-  withGoogleMap(props => (
-    <GoogleMap
-      defaultZoom={12}
-      initialCenter={{ lat: 10.3157, lng: 123.8854}}
-      defaultCenter={{ lat: 10.3157, lng: 123.8854 }}
-      defaultOptions={{
-        scrollwheel: true, //we disable de scroll over the map, it is a really annoing when you scroll through page
-        styles: [
-          {
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#1d2c4d"
-              }
-            ]
-          },
-          {
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#8ec3b9"
-              }
-            ]
-          },
-          {
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#1a3646"
-              }
-            ]
-          },
-          {
-            featureType: "administrative.country",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#4b6878"
-              }
-            ]
-          },
-          {
-            featureType: "administrative.land_parcel",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#64779e"
-              }
-            ]
-          },
-          {
-            featureType: "administrative.province",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#4b6878"
-              }
-            ]
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#334e87"
-              }
-            ]
-          },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#023e58"
-              }
-            ]
-          },
-          {
-            featureType: "poi",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#283d6a"
-              }
-            ]
-          },
-          {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#6f9ba5"
-              }
-            ]
-          },
-          {
-            featureType: "poi",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#1d2c4d"
-              }
-            ]
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [
-              {
-                color: "#023e58"
-              }
-            ]
-          },
-          {
-            featureType: "poi.park",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#3C7680"
-              }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#304a7d"
-              }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#98a5be"
-              }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#1d2c4d"
-              }
-            ]
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#2c6675"
-              }
-            ]
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry.fill",
-            stylers: [
-              {
-                color: "#9d2a80"
-              }
-            ]
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#9d2a80"
-              }
-            ]
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#b0d5ce"
-              }
-            ]
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#023e58"
-              }
-            ]
-          },
-          {
-            featureType: "transit",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#98a5be"
-              }
-            ]
-          },
-          {
-            featureType: "transit",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#1d2c4d"
-              }
-            ]
-          },
-          {
-            featureType: "transit.line",
-            elementType: "geometry.fill",
-            stylers: [
-              {
-                color: "#283d6a"
-              }
-            ]
-          },
-          {
-            featureType: "transit.station",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#3a4762"
-              }
-            ]
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#0e1626"
-              }
-            ]
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#4e6d70"
-              }
-            ]
-          }
-        ]
-      }}
-    >
-      <Marker position={{ lat: 10.3157, lng: 123.8854 }} />
-      <Marker position={{ lat: 10.3321, lng: 123.9357 }} />
-      <Marker
-      
-       position={{ lat: 10.3338, lng: 123.8941 }}  
-         name={'Kenyatta International Convention Centre'}
-          />
-    </GoogleMap>
-  ))
-);
-
-class Map extends React.Component {
+class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisible : true,
+      bingmapKey: "ApDiEZM9Y1G3Vyh71rC9RPmSJBYBA3owcwXOkwJxyVxj7I9_RX6n98ce2L0eyQXP", //Don't use this key in your environment.
+    
+      infoboxesWithPushPins: [
+        {
+          "location":[10.2990, 123.9639], 
+          "addHandler":"mouseover", //on mouseover the pushpin, infobox shown
+          "infoboxOption": { title: 'Rainfall Monitoring' },
+          "pushPinOption":{  },
+          "infoboxAddHandler": {"type" : "click", callback: this.callBackMethod },
+          "pushPinAddHandler": {"type" : "click", callback: this.callBackMethod }
+        },
+        {
+          "location":[10.2524,123.8392], 
+          "addHandler":"mouseover", //on mouseover the pushpin, infobox shown
+          "infoboxOption": { title: 'Flood Monitoring Site A' },
+          "pushPinOption":{  },
+          "infoboxAddHandler": {"type" : "click", callback: this.callBackMethod },
+          "pushPinAddHandler": {"type" : "click", callback: this.callBackMethod }
+        },
+        {
+          "location":[10.3321, 123.9357], 
+          "addHandler":"mouseover", //on mouseover the pushpin, infobox shown
+          "infoboxOption": { title: 'Flood Monitoring Site B' },
+          "pushPinOption":{  },
+          "infoboxAddHandler": {"type" : "click", callback: this.callBackMethod },
+          "pushPinAddHandler": {"type" : "click", callback: this.callBackMethod }
+        }
+      ],
+    }
+  }
+  
   render() {
     return (
-      <>
-        <div className="content">
-          <Row>
-            <Col lg="12">
-              <Card className="card-plain">
-                <CardHeader>Location Map</CardHeader>
-                <CardBody>
-                  <div
-                    id="map"
-                    className="map"
-                    style={{ position: "relative", overflow: "hidden" }}
-                  >
-                    <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbgYr-EQsfV7hdEeoHzmICbn5O8MRqbUc"
-                      loadingElement={<div style={{ height: `100%` }} />}
-                      containerElement={<div style={{ height: `100%` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
+      <div className="content">
+        {this.state.isVisible && (<div>
+          <div className = "map-two">
+            <ReactBingmaps 
+              id = "four"
+              center = {[10.3157, 123.8854]}
+              className = "customClass"
+              bingmapKey = {this.state.bingmapKey} 
+              mapTypeId = {"aerial"}
+              infoboxesWithPushPins = {this.state.infoboxesWithPushPins}
+            > 
+            </ReactBingmaps>
+          </div>
+        </div>)}
+        <br />
+      
+
+      </div>
     );
   }
 }
