@@ -40,7 +40,7 @@ export default class Rainfall2 extends Component
             let rain_data = [];
             Array.from(feed.feeds).forEach(element => {
             console.log(element);
-              rain_id.push(element.entry_id);
+              rain_id.push(element.created_at);
               rain_data.push(element.field1);
             });
 

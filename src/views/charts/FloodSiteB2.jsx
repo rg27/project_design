@@ -21,14 +21,14 @@ export default class FloodSiteB2 extends Component
       }
     } 
       componentDidMount() {
-        axios.get(`https://api.thingspeak.com/channels/872827/fields/1.json?results=25`)
+        axios.get(`https://api.thingspeak.com/channels/872827/fields/1.json?results=5`)
           .then(res => {
             const feed = res.data;
             let rain_id = [];
             let rain_data = [];
             Array.from(feed.feeds).forEach(element => {
             console.log(element);
-              rain_id.push(element.entry_id);
+              rain_id.push(element.created_at);
               rain_data.push(element.field1);
             });
 

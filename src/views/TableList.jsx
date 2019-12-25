@@ -6,6 +6,7 @@ import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 
 
+
 import axios from 'axios';
 
 class TableList extends Component {

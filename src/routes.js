@@ -5,8 +5,7 @@ import Rainfall from "views/Rainfall.jsx"
 import FloodSiteA from "./views/FloodSiteA";
 import FloodSiteB from "./views/FloodSiteB";
 import LocationMap from "./views/Map";
-
-
+import Weather from "./views/Weather";
 
 
 
@@ -52,6 +51,14 @@ var routes = [
     component: TableList,
     layout: "/admin"
   },
+  {
+    path: "/weather",
+    name: "Weather",
+    // rtlName: "خرائط",
+    icon: "tim-icons icon-pin",
+    component: Weather,
+    layout: "/admin"
+  },
 
   {
     path: "/map",
@@ -61,6 +68,9 @@ var routes = [
     component: LocationMap,
     layout: "/admin"
   },
+
+
+
 
 
 ];

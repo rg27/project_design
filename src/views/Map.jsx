@@ -8,7 +8,7 @@ class Map extends Component {
     super(props);
     this.state = {
       isVisible : true,
-      bingmapKey: "ApDiEZM9Y1G3Vyh71rC9RPmSJBYBA3owcwXOkwJxyVxj7I9_RX6n98ce2L0eyQXP", //Don't use this key in your environment.
+      bingmapKey: "ApDiEZM9Y1G3Vyh71rC9RPmSJBYBA3owcwXOkwJxyVxj7I9_RX6n98ce2L0eyQXP",
     
       infoboxesWithPushPins: [
         {
