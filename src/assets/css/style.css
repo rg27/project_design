@@ -109,13 +109,14 @@
 				
         @media screen and (min-width: 601px) {
           .customers  {
+          
             width: 103%;
-            font-size: 28px;
+            font-size: 25px;
             color: #82a8db;
           }
 
           .location1 {
-            font-size: 60px;
+            font-size: 50px;
             text-align: center;
           }
         }

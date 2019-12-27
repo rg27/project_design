@@ -40,7 +40,7 @@ class Weather extends React.Component{
             
                     <div className=" weather1 content ">
                     <h1 className="location1">Barangay Sirao 5 Days Weather Forecast</h1>
-                    <div className="limiter">
+                    <div className="limiter mt-5">
                         <div className="container-table100">
                             <div className="wrap-table100">
                                 <div className="table100">

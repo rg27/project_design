@@ -21,7 +21,7 @@ export default class FloodSiteB extends Component
       }
     } 
       componentDidMount() {
-        axios.get(`https://api.thingspeak.com/channels/872827/fields/1.json?results=10`)
+        axios.get(`https://api.thingspeak.com/channels/946392/fields/1.json?results=10`)
           .then(res => {
             const feed = res.data;
             let rain_id = [];

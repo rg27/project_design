@@ -41,7 +41,7 @@ class TableList extends Component {
     Promise.all([
       axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=5'),
       axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=15'),
-      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=105')
+      axios.get('https://api.thingspeak.com/channels/872827/fields/1.json?results=15')
     ])
     .then(([rainfalls_response, floods1_response, floods2_response]) => {
       const rainfalls = rainfalls_response.data.feeds
