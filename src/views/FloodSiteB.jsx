@@ -21,7 +21,7 @@ export default class FloodSiteB extends Component
       }
     } 
       componentDidMount() {
-        axios.get(`https://api.thingspeak.com/channels/946392/fields/1.json?results=10`)
+        axios.get(`https://api.thingspeak.com/channels/946392/fields/1.json?timezone=Asia%2FTaipei&results=10`)
           .then(res => {
             const feed = res.data;
             let rain_id = [];
@@ -38,7 +38,7 @@ export default class FloodSiteB extends Component
                 
                 datasets:[
                   {
-                    label:'Height',
+                    label:'Alert Level',
                     data: rain_data ,
                     fill: true,
                     // backgroundColor: gradientStroke,
@@ -100,9 +100,9 @@ export default class FloodSiteB extends Component
                         zeroLineColor: "transparent"
                       },
                       ticks: {
-                        suggestedMin: 60,
-                        suggestedMax: 125,
-                        padding: 20,
+                        suggestedMin: 1,
+                        suggestedMax: 3,
+                        padding: 50,
                         fontColor: "#9a9a9a"
                       }
                       }
