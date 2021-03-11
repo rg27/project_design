@@ -116,7 +116,7 @@ class Admin extends React.Component {
             routes={routes}
             bgColor={this.state.backgroundColor}
             logo={{
-              outterLink: "/dashboard",
+              outterLink: "/admin/dashboard",
               text: "Team Graduate",
               imgSrc: logo
             }}
