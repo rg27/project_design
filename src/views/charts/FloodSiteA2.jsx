@@ -68,7 +68,7 @@ export default class FloodSiteA2 extends Component
                 <CardHeader>
                   <Row>
                     <Col className="text-left" sm="12">
-                      <CardTitle tag="h2">Flood Monitoring Site A</CardTitle>
+                      <CardTitle tag="h2">Barangay Suba</CardTitle>
                     </Col>
                   </Row>
                 </CardHeader>

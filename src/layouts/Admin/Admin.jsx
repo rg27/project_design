@@ -115,11 +115,11 @@ class Admin extends React.Component {
             {...this.props}
             routes={routes}
             bgColor={this.state.backgroundColor}
-            logo={{
-              outterLink: "/admin/dashboard",
-              text: "Team Graduate",
-              imgSrc: logo
-            }}
+            // logo={{
+            //   outterLink: "/admin/dashboard",
+            //   text: "Team Graduate",
+              
+            // }}
             toggleSidebar={this.toggleSidebar}
           />
           <div
